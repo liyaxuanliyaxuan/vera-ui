@@ -1,14 +1,14 @@
 {
-  "name": "happy-ui",
-  "version": "3.0.2",
+  "name": "vera-ui",
+  "version": "3.0.4",
   "description": "A React UI Library.",
   "homepage": "https://github.com/worldzhao/react-ui-library-tutorial#readme",
   "typings": "lib/index.d.ts",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "authors": {
-    "name": "worldzhao",
-    "email": "1007326924@qq.com"
+    "name": "liyaxuan",
+    "email": "15196387158@163.com"
   },
   "scripts": {
     "dev": "docz dev",
