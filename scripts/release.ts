@@ -1,14 +1,13 @@
+import { ReleaseType } from 'semver';
+import chalk from 'chalk';
+import child_process from 'child_process';
+import fs from 'fs';
 /* eslint-disable  import/no-extraneous-dependencies,@typescript-eslint/camelcase, no-console */
 import inquirer from 'inquirer';
-import fs from 'fs';
 import path from 'path';
-import child_process from 'child_process';
-import util from 'util';
-import chalk from 'chalk';
-import semverInc from 'semver/functions/inc';
-import { ReleaseType } from 'semver';
-
 import pkg from '../package.json';
+import semverInc from 'semver/functions/inc';
+import util from 'util';
 
 const exec = util.promisify(child_process.exec);
 
@@ -88,7 +87,7 @@ async function generateChangelog() {
  */
 async function push(nextVersion: string) {
   timeLog('推送代码至git仓库', 'start');
-  await run('git add package.json CHANGELOG.md');
+  // await run('git add package.json CHANGELOG.md');
   await run(`git commit -m "v${nextVersion}" -n`);
   await run('git push');
   timeLog('推送代码至git仓库', 'end');
@@ -115,10 +114,11 @@ async function publish() {
 /**
  * 打tag提交至git
  */
+const myRepo = 'vera';
 async function tag(nextVersion: string) {
   timeLog('打tag并推送至git', 'start');
   await run(`git tag v${nextVersion}`);
-  await run(`git push origin tag v${nextVersion}`);
+  await run(`git push ${myRepo} tag v${nextVersion}`);
   timeLog('打tag并推送至git', 'end');
 }
 
@@ -129,7 +129,7 @@ async function main() {
     // =================== 更新版本号 ===================
     await updateVersion(nextVersion);
     // =================== 更新changelog ===================
-    await generateChangelog();
+    // await generateChangelog();
     // =================== 代码推送git仓库 ===================
     await push(nextVersion);
     // =================== 组件库打包 ===================
