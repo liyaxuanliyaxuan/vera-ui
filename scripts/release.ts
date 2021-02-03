@@ -107,7 +107,7 @@ async function build() {
  */
 async function publish() {
   timeLog('发布组件库', 'start');
-  await run('npm login');
+  // await run('npm login');
   await run('npm publish');
   timeLog('发布组件库', 'end');
 }
