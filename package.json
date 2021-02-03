@@ -1,6 +1,6 @@
 {
   "name": "happy-ui",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A React UI Library.",
   "homepage": "https://github.com/worldzhao/react-ui-library-tutorial#readme",
   "typings": "lib/index.d.ts",

@@ -89,7 +89,7 @@ async function push(nextVersion: string) {
   timeLog('推送代码至git仓库', 'start');
   // await run('git add package.json CHANGELOG.md');
   await run(`git commit -m "v${nextVersion}" -n`);
-  await run('git push');
+  await run(`git push ${myRepo}`);
   timeLog('推送代码至git仓库', 'end');
 }
 
