@@ -9,6 +9,10 @@ import pkg from '../package.json';
 import semverInc from 'semver/functions/inc';
 import util from 'util';
 
+// custom
+
+const myRepo = 'vera';
+// 首先进行npm登陆
 const exec = util.promisify(child_process.exec);
 
 const run = async (command: string) => {
@@ -115,7 +119,6 @@ async function publish() {
 /**
  * 打tag提交至git
  */
-const myRepo = 'vera';
 async function tag(nextVersion: string) {
   timeLog('打tag并推送至git', 'start');
   await run(`git tag v${nextVersion}`);
