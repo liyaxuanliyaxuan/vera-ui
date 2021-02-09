@@ -25,7 +25,7 @@ const Button: React.FC<ButtonProps> = ({
   text = 'button',
   bgColor = 'primary',
   size = 'middle',
-  fontColor = '#ffff',
+  fontColor = '#FFF',
   onClick,
   onMouseEnter,
   onMouseLeave,
@@ -37,7 +37,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   const btnClassNames = cn({
     'base-btn': true,
-    'disabled-btn': disabled,
+    'btn-disabled': disabled,
     'round-btn': rounded,
     'warning-btn': bgColor === 'warning',
   });

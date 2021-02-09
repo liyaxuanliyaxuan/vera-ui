@@ -1,6 +1,6 @@
 {
   "name": "vera-ui",
-  "version": "3.0.6",
+  "version": "3.0.8",
   "description": "A React UI Library.",
   "homepage": "https://github.com/worldzhao/react-ui-library-tutorial#readme",
   "typings": "lib/index.d.ts",
@@ -127,7 +127,9 @@
   "dependencies": {
     "@babel/runtime": "^7.12.13",
     "@types/classnames": "^2.2.11",
+    "@types/d3": "^6.3.0",
     "classnames": "^2.2.6",
+    "d3": "^6.5.0",
     "prop-types": "^15.7.2"
   }
 }

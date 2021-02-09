@@ -1,18 +1,23 @@
-#message-container {
+.message-container {
   position: fixed;
-  top: 40px;
-  z-index: 100;
+  top: 20px;
+  z-index: 20;
   display: flex;
+  left: 0;
+  right: 0;
   justify-content: center;
-  width: 100%;
+  flex-direction: column;
 }
 
 .base-message {
   text-align: center;
-  background-color: slategrey;
-  color: black;
-  font-size: 16px;
-  opacity: 0.5;
-  line-height: 2;
-  padding: 2px;
+  background: #ffffff;
+  padding: 16px 32px;
+  margin: 8px auto;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  color: #454545;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
 }
